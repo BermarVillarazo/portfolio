@@ -1,0 +1,127 @@
+.contact {
+    padding: 75px 50px 25px 50px;
+}
+
+.contact h3 {
+    margin: 0 0 75px 0;
+}
+
+.contact--compiler {
+    position: relative;
+}
+
+.scrollup {
+    position: absolute;
+    top: -100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+.scrollup a {
+    color: var(--white);
+    font-size: 50px;
+}
+
+.scrollup a:hover {
+    transform: scale(.9);
+    color: var(--red);
+}
+
+.gmail--btn {
+    width: auto;
+    margin: auto;
+    padding-inline: 20px;
+    border-radius: 10px;
+}
+
+.social--compiler {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social--side {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.social--side h3 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.social--btn {
+    background: none;
+}
+
+.social--link {
+    display: flex;
+    gap: 30px;
+    font-size: 40px;
+}
+
+.social--link a {
+    color: var(--white);
+    filter: var(--white--filter);
+}
+
+.social--link a:hover {
+    transform: scale(.9);
+    color: var(--red);
+}
+
+.copyright h4 {
+    margin: 75px 0 0 0;
+    font-weight: lighter;
+}
+
+.copyright a {
+    color: var(--red);
+}
+
+.copyright a:hover {
+    filter: var(--red--filter);
+}
+
+@media screen and (min-width: 0) and  (max-width: 769px) {
+    .contact {
+        padding: 75px 25px 25px 25px;
+    }
+
+    .social--compiler {
+        gap: 75px;
+    }
+
+    .gmail--btn {
+        width: 225px;
+        margin: auto;
+        padding-inline: 15px;
+        border-radius: 10px;
+    }
+
+    .gmail--btn a {
+        font-size: 80%;
+    }
+
+    .social--compiler {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .social--side {
+        align-items: center;
+    }
+
+    .social--link {
+        flex-wrap: wrap;
+        flex: 1;
+        width: 75%;
+        justify-content: space-evenly;
+    }
+}

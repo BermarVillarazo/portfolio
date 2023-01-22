@@ -1,0 +1,128 @@
+.projects--compiler {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 50px 0;
+    overflow: hidden;
+    margin: 50px 0;
+    padding: 40px;
+}
+
+.projects--compiler img {
+    width: 550px;
+}
+
+.divstruct {
+    margin-left: auto;
+}
+
+.akirasan {
+    order: 2;
+    margin-left: auto;
+}
+
+.ecommerce {
+    order: 1;
+}
+
+.carentals {
+    order: 3;
+}
+
+.divstruct img,
+.ecommerce img {
+    width: 645px;
+}
+
+.animestocks,
+.ecommerce,
+.carentals {
+    margin-right: auto;
+}
+
+.projects--compiler img {
+    border-radius: 10px;
+    box-shadow: var(--image--shadow);
+}
+
+.hover--info {
+    position: relative;
+    transition: transform 250ms ease-in-out;
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background--opacity);
+    color: var(--white);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+
+.project--made {
+    position: absolute;
+    bottom: 5px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.project--made * {
+    background-color: var(--red);
+    padding: 5px;
+    border-radius: 10px;
+
+    animation: moveUpDown 3s ease-in-out infinite;
+}
+
+.box h2,
+.box p {
+    margin: 0;
+}
+
+.hover--info:hover {
+    transform: scale(.95);
+}
+
+.box:hover {
+    opacity: 1;
+}
+
+@media (max-width: 1025px) {
+    .hover--info img {
+        width: 80%;
+    }
+
+    .divstruct img,
+    .ecommerce img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 0) and (max-width: 769px) {
+    .projects--compiler {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5px;
+        margin: 50px 0 40px 0;
+    }
+
+    .hover--info img {
+        width: 100%;
+    }
+}

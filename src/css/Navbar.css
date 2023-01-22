@@ -1,0 +1,119 @@
+nav {
+    display: flex;
+    padding: 2em;
+    z-index: 99;
+
+    transition: all .5s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.content li {
+    padding-inline: 2vw;
+}
+
+li,
+li a {
+    color: var(--white);
+    text-shadow: var(--white--shadow);
+    list-style: none;
+    text-decoration: none;
+}
+
+.logo,
+.active > a {
+    color: var(--red);
+    text-shadow: var(--red--shadow);
+}
+
+li:hover,
+li a:hover {
+    transition: 400ms;
+    color: var(--red);
+    text-shadow: var(--red--shadow);
+}
+
+.logo:hover,
+.active > a:hover {
+    transition: 400ms;
+    color: var(--white);
+    text-shadow: var(--white--shadow);
+}
+
+.navbar--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--bgcolor--section);
+    box-shadow: var(--boxshadow--section);
+}
+
+.nav--btn {
+    display: none;
+}
+
+.nav--btn button {
+    font-size: 25px;
+    padding: 0;
+    width: 100%;
+    border: none;
+    background: none;
+}
+
+.nav--btn button:hover {
+    animation: none;
+    box-shadow: none;
+    border: none;
+}
+
+
+@media screen and (max-width: 582px) {
+    nav {
+        padding: .5em 1em;
+    }
+
+    nav .content {
+        position: absolute;
+        top: 20vw;
+        left: -250%;
+        right: 0;
+        width: 0;
+        background-color: var(--background-color);
+        padding-block: 30px;
+
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 40px;
+
+        opacity: 0;
+
+        transition: opacity .5s ease-out;
+    }
+
+    nav .content.show {
+        left: 0;
+        width: 100%;
+        opacity: 1;
+    }
+
+    .nav--btn,
+    .nav--btn button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

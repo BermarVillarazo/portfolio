@@ -1,0 +1,37 @@
+.hire {
+    background-image: url(../../img/background.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hire--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+
+@media screen and (max-width: 769px) {
+    .hire--container {
+        flex-direction: column;
+        gap: 50px;
+        padding: 100px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .hire {
+        background-size: cover;
+    }
+
+    #hire {
+        padding: 15px;
+    }
+
+    .hire--container {
+        gap: 50px;
+        padding: 100px 0 100px 0;
+    }
+}

@@ -1,0 +1,147 @@
+.skills--compiler {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+}
+
+/* CODING SKILLS */
+
+#code::after {
+    content: '!';
+    position: relative;
+    padding-inline: 10px;
+    background-color: gray;
+    margin-inline: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#shown {
+    color: var(--red);
+    float: right;
+    animation: moveUpDown 1s ease-in-out infinite;
+}
+
+.skills--info:last-child {
+    margin-bottom: 50px;
+}
+
+.skills--info h2 {
+    margin: 50px auto;
+    width: 190px;
+}
+
+.skills--info h3 {
+    text-align: left;
+    margin-left: 40px;
+}
+
+.html > button {
+    position: relative;
+    width: 542px;
+    height: 22px;
+    border-radius: 8px;
+    background-color: var(--white);
+}
+
+.html > button::before {
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--red);
+
+    position: absolute;
+    width: 85%;
+    border-radius: 8px;
+
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.html > button:hover::before {
+    transform: scaleX(1);
+}
+
+.html > button:hover {
+    transform: scale(1);
+}
+
+.css > button::before {
+    width: 85%;
+}
+
+.javascript > button::before {
+    width: 70%;
+}
+
+.reactjs > button::before {
+    width: 55%;
+}
+
+.scss > button::before {
+    width: 45%;
+}
+
+.jquery > button::before {
+    width: 45%;
+}
+
+.bootstrap > button::before {
+    width: 45%;
+}
+
+/* MY SERVICE */
+.myservice--compiler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.responsive {
+    max-width: 577px;
+    background-color: var(--bgcolor--section);
+    box-shadow: var(--myService--shadow);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.responsive h2 {
+    margin: 10px auto 0 auto;
+}
+
+.responsive h3 {
+    margin: 0;
+    padding: 15px 10px 0 10px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1025px) {
+    .skills--compiler {
+        gap: 30px;
+    }
+
+    .skills--info {
+        width: 50%;
+    }
+
+    .html > button {
+        width: 100%;
+        height: 22px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .skills--compiler {
+        flex-direction: column;
+    }
+
+    .skills--info {
+        width: 100%;
+    }
+}
+
